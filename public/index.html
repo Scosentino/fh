@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+<head>
+  <!-- Basic -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Fish House | Key Largo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no"/>
+
+  <link rel="icon" type="image/png" href="img/favicon.ico">
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100italic,100,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+  <link rel="stylesheet"type="text/css" href="css/blue.css"/>
+  <!-- Responsive -->
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
+
+  <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/ie.js"></script>
+      <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+</head>
+
+<body onload="initialize()">
+ <div class="loader"></div>
+
+
+ <!--===| Pop Up Google Map Start |===-->
+<div class="popup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div class="popup-wrapper">
+            <div class="row">
+              <div class="cross">
+                  <p>X</p>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="container">
+                  <P class="heading-top">Can we help you find our Location?</P>
+                  <p class="heading">Fish House</p>
+                  <p>102401 Overseas Hwy
+                    <br>Key Largo, FL 33037</p>
+                  <p class="heading">Fish House Encore</p>
+                  <p>102341 Overseas Hwy
+                    <br>Key Largo, FL 33937</p>
+                  <p class="heading">Email</p>
+                  <p>please feel free to send us an email</p>
+                  <p><a class="btn btn-primary" href="mailto:admin@fishouse.com">Email Us</a></p>
+                  <p class="heading">contact no</p>
+                  <p>give us a call</p>
+                  <p><strong>Fish House:</strong><a href="tel:305-451-4665">305-451-4665 </a></p>
+                  <p><strong>Fish House Encore:</strong><a href="tel:305-451-0650">305-451-0650</a></p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+
+
+                <div id="map-canvas"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--===| Pop Up Google Map End |===-->
+<!--===| Header Top Start |===-->
+  <div id="offcanvas-container" class="wrapper offcanvas-container">
+    <div class="inner-wrapper offcanvas-pusher">
+
+<div class="slider-one">
+  <div id="map" class="overlay">
+    <div class="guideme"><i class="flaticon-map43"></i></div>
+  </div>
+  <header class="header-wrapper">
+          <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="logo">
+                <a title="UrbanGrill" href="index.html">
+                  <img id="logo" src="img/grouper.gif" alt="UrbanGrill Logo">
+                </a>
+              </div><!-- /Logo -->
+              <!-- =========================================
+              Menu
+              ========================================== -->
+              <div class="navbar navbar-default mainnav">
+                <div class="navbar-header navbar-right pull-right">
+                  <div id="offcanvas-trigger-effects" class="column">
+                    <button type="button" class="navbar-toggle visible-sm visible-xs" data-toggle="offcanvas" data-target=".navbar-collapse" data-placement="right" data-effect="offcanvas-effect"> <i class="fa fa-bars"></i>
+                    </button>
+                  </div><!-- offcanvas-trigger-effects -->
+                </div><!-- .navbar-header -->
+
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li ><a href="about-us.html">About Us</a></li>
+                    <li class="dropdown"><a href="events.html">Menu <i class="fa fa-angle-down"></i></a>
+                      <div class="submenu-wrapper no-pointer-events submenu-wrapper-topbottom">
+                        <div class="submenu-inner submenu-inner-topbottom">
+                          <ul class="level-one dropdown-menu single-dropdown">
+                            <li><a href="/fhlunch.html">Fish House Lunch</a></li>
+                            <li><a href="/fhdinner.html">Fish House Dinner</a></li>
+                            <li><a href="/encorelunch.html">Encore Lunch</a></li>
+                            <li><a href="encoredinner.html">Encore Dinner</a></li>
+                          </ul>
+                        </div><!-- .submenu-inner -->
+                      </div><!-- .submenu-sub-wrapper -->
+                    </li><!-- /Portfolio Pages -->
+                    <!-- Contact Pages -->
+                    <li><a href="contact-us.html">Contact</a></li><!-- /Contact Pages -->
+                  </ul><!-- .navbar-nav -->
+                </div><!-- .navbar-collapse -->
+              </div><!-- .navbar -->
+            </div><!-- .col-xs-12 -->
+          </div><!-- .row -->
+          </div> <!-- .container -->
+        </header><!-- /header-wrapper -->
+<!--#################################
+    - THEMEPUNCH BANNER -
+#################################-->
+
+  <div class="tp-banner-container">
+    <div class="tp-banner" >
+      <ul>  <!-- SLIDE  -->
+  <li data-transition="slotfade-horizontal" data-slotamount="1" data-masterspeed="500" data-title="Maki Sushi">
+    <!-- MAIN IMAGE -->
+    <img src="img/1.jpg"  alt="slidebg1" data-lazyload="img/1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+    <!-- LAYERS -->
+<!-- LAYER NR. 1 -->
+    <div class="tp-caption tp-resizeme sft start"
+            data-hoffset="0"
+            data-x="905"
+            data-y="260"
+            data-speed="2000"
+            data-start="2000"
+            data-easing="Power4.easeOut"
+            data-endspeed="300"
+            data-endeasing="Power1.easeIn"
+            data-captionhidden="off"
+            style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Merriweather', sans-serif; font-size: 33px; letter-spacing: 1px; font-style: italic; ">
+            <span> welcome to</span>
+          </div>
+<!-- LAYER NR. 2 -->
+    <div class="tp-caption tp-resizeme sft"
+      data-x="760"
+      data-y="300"
+      data-speed="1000"
+      data-start="2400"
+      data-easing="Power4.easeOut"
+      data-endspeed="300"
+      data-endeasing="Power1.easeIn"
+      data-captionhidden="off"
+      style="z-index: 7; max-height: auto; white-space: nowrap;font-family : 'Playball', sans-serif; font-size: 93px; letter-spacing: 2px; color: #fff;">Fish House
+    </div>
+<!-- LAYER NR. 3 -->
+    <div class="tp-caption tp-resizeme sft"
+      data-x="875"
+      data-y="369"
+      data-speed="1000"
+      data-start="2700"
+      data-easing="Power4.easeOut"
+      data-endspeed="300"
+      data-endeasing="Power1.easeIn"
+      data-captionhidden="off"
+      style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Roboto', sans-serif; text-transform: uppercase; font-size: 18px; font-weight: 400; letter-spacing: 3px; color: #fff;">best quality food
+    </div>
+
+<!-- LAYER NR. 4 -->
+    <div class="tp-caption tp-resizeme sft"
+      data-x="910"
+      data-y="420"
+      data-speed="1000"
+      data-start="3000"
+      data-easing="Power3.easeInOut"
+      data-splitin="none"
+      data-splitout="none"
+      data-elementdelay="0.1"
+      data-endelementdelay="0.1"
+      data-linktoslide="next"
+      style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='tr-slider-btn'>READ MORE</a>
+    </div>
+
+  </li>
+  <!-- SLIDE 2 -->
+   <!-- data-transition="curtain-2" data-slotamount="1" data-masterspeed="1000" -->
+   <li data-transition="slotfade-horizontal" data-slotamount="1" data-masterspeed="500" data-title="Pasta sauce">
+    <!-- MAIN IMAGE -->
+   <img src="img/2.jpg"  alt="slidebg1" data-lazyload="img/2.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+<!-- LAYER NR. 1 -->
+      <div class="tp-caption tp-resizeme sft start"
+        data-x="800"
+        data-y="255"
+        data-speed="2000"
+        data-start="2000"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Merriweather', sans-serif; font-size: 33px; font-style: italic;"><span>Memorable</span>
+      </div>
+ <!-- LAYER NR. 2 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="730"
+        data-y="300"
+        data-speed="1000"
+        data-start="2400"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;font-family : 'Playball', sans-serif;font-size: 91px; letter-spacing: 3px; color: #fff;">Experience
+      </div>
+
+  <!-- LAYER NR. 3 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="705"
+        data-y="365"
+        data-speed="1000"
+        data-start="2700"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Roboto', sans-serif;text-transform: uppercase; font-size: 16px;letter-spacing: 3px; color: #fff;">with impeccable service and great food
+    </div>
+    <!-- LAYER NR. 4 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="820"
+        data-y="415"
+        data-speed="1000"
+        data-start="3000"
+        data-easing="Power3.easeInOut"
+        data-splitin="none"
+        data-splitout="none"
+        data-elementdelay="0.1"
+        data-endelementdelay="0.1"
+        data-linktoslide="next"
+        style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='tr-slider-btn'>Veiw Our Food Menu</a>
+      </div>
+   </li>
+  <!-- SLIDE  3-->
+  <li data-transition="slotfade-horizontal" data-slotamount="1" data-masterspeed="500" data-title="Chef's finishing touch">
+    <!-- MAIN IMAGE -->
+   <img src="img/4.jpg"  alt="slidebg1" data-lazyload="img/4.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+   <!-- LAYER NR. 1 -->
+      <div class="tp-caption tp-resizeme sft start"
+        data-x="590"
+        data-y="245"
+        data-speed="2000"
+        data-start="2000"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Merriweather', sans-serif; font-size: 33px; font-style: italic;text-transform:capitalize;font-weight:400;"><span>We take our</span>
+      </div>
+     <!-- LAYER NR. 2 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="360"
+        data-y="300"
+        data-speed="1000"
+        data-start="2400"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;font-family : 'Playball', sans-serif;font-size: 91px; color: #fff;">Responsibilities
+      </div>
+    <!-- LAYER NR. 3 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="390"
+        data-y="365"
+        data-speed="1000"
+        data-start="2700"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;  font-family: 'Roboto', sans-serif;text-transform: uppercase; font-size: 14px;letter-spacing: 4px; color: #fff;">very seriously – from the environment
+      </div>
+      <!-- LAYER NR. 4 -->
+      <div class="tp-caption tp-resizeme sft"
+        data-x="center"
+        data-y="410"
+        data-speed="1000"
+        data-start="3000"
+        data-easing="Power4.easeOut"
+        data-endspeed="300"
+        data-endeasing="Power1.easeIn"
+        data-captionhidden="off"
+        style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='tr-slider-btn'>Book a Table Now</a>
+      </div>
+  </li>
+</ul>
+<div class="tp-bannertimer"></div>
+    </div>
+  </div>
+  </div><!--slider One -->
+
+<!--===| Welcome Area Start===|-->
+<section class="welcome-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="welcome-note text-center">
+          <h1>welcome</h1>
+          <h2> to The Fish House & Fish House Encore</h2>
+          <p class="note"><strong>Specializing in the finest seafood available,</strong></p>
+          <p>The Fish House opened just as the Conch Republic was born. Since the key to terrific seafood lies in the freshness, we made that our trademark.</p>
+          <p>So relax. Get laid back like the locals do, and dig into our scrumptious conch-style cooking.You’ll be glad you did!</p>
+          <p><strong>Yours Truly, C.J., Doug, & The Fish House Gang</strong></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6  col-md-6 first-column">
+            <div class="upcoming-event text-center">
+            <h3>upcoming event</h3>
+            <p class="blue-night">Live Blues Night</p>
+            <div class="date-times text-center">
+              <p class="date-upcoming">06</p>
+              <p class="month-day"><span>JUN 2015</span><br>saturday</p>
+            </div>
+            <div class="time text-center">
+              <p>07 pm</p>
+            </div>
+            <div class="bbq-party">
+              <p>Join with us for a delicious summer <br> BBQ and enjoy good<span  class="read-more"><a class="text-right" href="#">Join now..</a></span></p>
+            </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 ">
+            <div class="grid">
+              <figure class="effect-cheff">
+                <img class="img-responsive" src="http://placehold.it/369x269" alt="Food Welcome 1"/>
+                <figcaption>
+                  <h2>Monthly Special</h2>
+                  <p>2 courses for $10.95 <br>or 3 courses for $12.95</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6  col-md-6 column-margin clear-left">
+            <div class="grid">
+              <figure class="effect-cheff">
+                <img src="http://placehold.it/369x269" alt="Food Welcome 2"/>
+                <figcaption>
+                  <h2>our chef</h2>
+                  <p>Our best professional chef</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 column-margin">
+            <div class="upcoming-event-last text-center">
+              <h3>Chilli cooking lesson</h3>
+              <p class="blue-night">Do you love cooking?</p>
+              <div class="bbq-party">
+              <p>Aliquam ullamcorper finibus lorem ut Aliquam sed aliquet eros</p>
+            </div>
+            <div class="read-more pull-right">
+              <a class="text-right" href="#">Read More..</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===| Welcome Area End===|-->
+
+
+<!--===| Service Start ===|-->
+<section class="services">
+  <div class="services-overlay">
+    <div class="container">
+      <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+        <h1>Why Were the Best</h1>
+        <p class="slogan">Fresh and Exquisite Seafood </p>
+          <ul id="myTab" class="nav nav-tabs">
+            <!-- This Tab Target #tab-features -->
+            <li><a href="#tab-features" data-toggle="tab" aria-expanded="true"><i class="fa fa-cutlery"></i><br>Fish Market</a></li>
+            <!-- This tab targets #extra -->
+            <li class="active"><a href="#extra" data-toggle="tab" aria-expanded="false"><i class="fa fa-smile-o"></i><br>Atmosphere</a></li>
+            <!-- this tab targets #home-delivery -->
+            <li><a href="#home-delivery" data-toggle="tab" aria-expanded="false"><i class="fa fa-star"></i><br>Dynamic Menus</a></li>
+            <!-- this tab targets #custom -->
+            <li><a href="#custom" data-toggle="tab" aria-expanded="false"><i class="fa fa-music"></i><br>Live Entertainment</a></li>
+          </ul><div class="panel-group visible-xs" id="myTab-accordion"></div>
+
+          <!-- this is the #tab-features tab -->
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade" id="tab-features">
+              <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                  <h2><a href="#">Take the Fish House home with you! </a></h2>
+                  <p>There's no better way to re-live your Keys experience than to experience once again, the fresh fish caught from our back yard! The Fish House remains one of the only existing establishments that purchases from local commercial fishermen and fillets all fish on premise.  <br> <a class="btn btn-default" href="tel:888-451-4665">Call our Market</a></p>
+
+                </div>
+              </div>
+            </div>
+            <!-- this is the #extra tag -->
+            <div class="tab-pane fade active in" id="extra">
+              <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                  <h2><a href="#">Come get a piece of the Keyzy Experience</a></h2>
+                  <p>A local Favorite, and with good reason. Come see why time and time again we are chosen as the best seafood in the keys. You won't be dissapointed</p>
+
+                </div>
+              </div>
+            </div>
+            <!-- this is the #home-delivery tab -->
+            <div class="tab-pane fade " id="home-delivery">
+              <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                  <h2><a href="#">From the Seafood to Landlovers</a></h2>
+                  <p>We have pristine choice cuts of meat, fresh seafood and delicios sushi (Fish House Encore.) There's something on the menu for everyone. </p>
+                  <a class="btn btn-default btn-link" href="#" role="button">view menu</a>
+                </div>
+              </div>
+            </div>
+            <!-- this is the #custom tab -->
+            <div class="tab-pane fade" id="custom">
+              <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                  <h2><a href="#">What love Culture</a></h2>
+                  <p>Come Support our local Artists, we have live music at Fish House encore from Wednesday to Sunday. You're Welcome!</p>
+
+                </div>
+              </div>
+            </div>
+          </div><!--/.tan-content-->
+        </div>
+      </div>
+  </div>
+  </div>
+</section>
+<!--===| Start Signature Dishes Start|===-->
+  <section class="section-padding signature-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>signature dishes</h1>
+          <p class="slogan">fresh and Divine Seafood</p>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-12">
+           <div class="owl-wrap">
+            <div id="owl-dishes" class="owl-carousel">
+              <div class="feature-image">
+                    <img src="img/fhapps.jpg" alt="Signature Dishes 01">
+                    <h2>Stone Crab Claws</h2>
+                    <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
+                    <p class="price">price: <span>Market</span></p>
+              </div>
+
+              <div class="feature-image">
+                <img src="http://placehold.it/264x174" alt="Signature Dishes 02">
+                <h2>Example menu item</h2>
+                <p>Menu item description that goes in detail and takes up two lines of space</p>
+                <p class="price">price: <span>$price</span></p>
+              </div>
+              <div class="feature-image">
+                  <img src="http://placehold.it/264x174" alt="Signature Dishes 03">
+                  <h2>Example Menu Item</h2>
+                  <p>Menu item description that goes in detail and takes up two lines of space</p>
+                  <p class="price">price: <span>$price</span></p>
+              </div>
+
+               <div class="feature-image">
+                    <img src="http://placehold.it/264x174" alt="Signature Dishes 01">
+                    <h2>Example Menu Item</h2>
+                  <p>Menu item description that goes in detail and takes up two lines of space</p>
+                  <p class="price">price: <span>$price</span></p>
+              </div>
+              <div class="feature-image">
+                <img src="http://placehold.it/264x174" alt="Signature Dishes 02">
+                <h2>Example Menu Item</h2>
+                  <p>Menu item description that goes in detail and takes up two lines of space</p>
+                  <p class="price">price: <span>$price</span></p>
+              </div>
+           </div><!-- /.owl-carousel -->
+            <div class="owl-controls">
+             <a class="next"><i class="flaticon-arrow427"></i></a>
+              <a class="prev"><i class="flaticon-arrow413"></i></a>
+            </div>
+          </div><!-- /.owl-wrap -->
+         </div>
+      </div>
+    </div>
+  </section>
+  <!--====| End Signature Dishes End|====-->
+
+<!--===| Testimonial Start|===-->
+<section class="section-padding testimonial-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+        <h1>Customer says</h1>
+        <div id="testimonial" class="carousel slide carousel-fade" data-ride="carousel">
+
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="http://media-cdn.tripadvisor.com/media/photo-l/06/e5/74/d9/rosemary-g.jpg" alt="testimonial 01">
+
+              <p>Just had lunch at the Fish House. Fast service. I had the fish of the day, hogfish snapper. It was excellent. Mild,flaky, light white fish which is seasonal and caught by spear. Had it deep fried on a tasty bun. Cole slaw was excellent and the French fries were fresh and hot. My husband had the fried grouper which I must say, was, the best grouper I have tasted in our 20 years of eating grouper. Lovely funky atmosphere. Large portions. Economically priced. We will return, for sure.</p>
+              <blockquote> Rosemary G</blockquote>
+            </div>
+            <div class="item">
+              <img src="http://media-cdn.tripadvisor.com/media/photo-l/01/62/5a/2c/milwaukeetravelbuffs.jpg" alt="testimonial 02">
+
+              <p>We ate here after snorkeling in John Pennekamp. They were very accomodating with our attire--coverups over swimsuites, and seated us in the patio-which was fun! The waiter gave us the scoop on what his favorites, and customer favorites were. We had the Lion Fish Oscar Style and it was delicious. Key Lime pie was fantastic as well. Definitely will eat here again if we make it back to Key Largo</p>
+              <blockquote> Milwaukeetravelbuffs</blockquote>
+            </div>
+            <div class="item">
+              <img src="http://media-cdn.tripadvisor.com/media/photo-l/03/f1/63/3b/mary-m.jpg" alt="testimonial 03">
+
+              <p>Great fresh fish, good service, wines, and surprisingly nicely cooked veggies made the meals here our best in Key Largo. Locals tell us it's the best, and after three meals, we believe them. They usually have invasive lionfish on the menu, delicious, and you do the waters a good turn by eating this dangerous invasive predator that tastes like grouper married with Dover sole!</p>
+              <blockquote> Mary M</blockquote>
+            </div>
+          </div>
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#testimonial" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonial" data-slide-to="1"></li>
+            <li data-target="#testimonial" data-slide-to="2"></li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===| Testimonial End|===-->
+
+
+
+  <!--====| Gallery Start |====-->
+  <section class="galleri-wrapper section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>gallery</h1>
+          <p class="slogan">We know Seafood! Check us Out!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+            <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                <img src="img/display.jpg" alt="Gallery 01"/>
+                <figcaption>
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/display.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Are you hungry?</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+            <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/volcano2.jpg" alt="Gallery 02">
+                  <figcaption>
+                   <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/volcano2.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Hanging out enjoying a volcano!</p>
+                  </div>
+                  </figcaption>
+              </figure>
+            </div>
+            <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                <img src="img/fhkitchen.jpg" alt="Gallery 03">
+                <figcaption>
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/fhkitchen.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Delicious Food From the Line </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/cuttingboard.jpg" alt="Gallery 04">
+                <figcaption class="figure-class">
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/cuttingboard.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Fresh Catch!</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+            <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/encore-lobster.jpg" alt="Gallery 05">
+                <figcaption>
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/encore-lobster.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>This lobster is sure to make you hungry!</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/gma.jpg" alt="Gallery 06">
+                <figcaption>
+                 <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/gma.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Founders out at an event!</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/fishhousekitchen.jpg" alt="Gallery 07">
+                <figcaption class="figure-class">
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/fishhousekitchen.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>More Delicious food from the line!</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <div class="grid">
+              <figure class="effect-cheff gallary-image">
+                 <img src="img/header.jpg" alt="Gallery 08">
+                <figcaption>
+                  <div class="gallary-hover-text">
+                    <a class="yellow-bar fancybox" href="img/header.jpg" data-fancybox-group="gallery"><i class="fa fa-plus"></i></a>
+                  <p>Our Awesome Locations</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--====| Gallery End |====-->
+
+
+<!--====| Footer section Start|====-->
+<footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h3 class="footer-title">Fish House</h3>
+          <div class="open-time opening-time">
+           <p class="clock-time"><strong>monday :</strong> 11:30am until 10:00pm</p>
+           <p><strong>tue-fri :</strong> 11:30am until 10:00pm</p>
+           <p><strong>sat-sun :</strong> 11:30am until 10:00pm</p>
+           <p><strong>holydays :</strong> 11:30am until 10:00pm</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h3 class="footer-title">Fish House Encore</h3>
+          <div class="open-time opening-time">
+            <p>The Encore is closed for maintenance and vacation until Friday, October 30th when we reopen for dinner at 5pm.</p>
+          <!--  <p class="clock-time"><strong>monday :</strong> 11:30am until 10:00pm</p>
+           <p><strong>tue-fri :</strong> 11:30am until 10:00pm</p>
+           <p><strong>sat-sun :</strong> 11:30am until 10:00pm</p>
+           <p><strong>holydays :</strong> 11:30am until 10:00pm</p> -->
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+           <h3 class="footer-title">contacts</h3>
+          <div class="address">
+           <p class="icon-map"><i class="fa fa-map-marker"></i><strong>address :</strong>  102401 Overseas Hwy</p>
+           <p class="road-details"Key Largo, FL 33037</p>
+           <p><i class="fa fa-phone"></i><strong>phone :</strong> <a href="tel:3054514665">(305)451-4665</a></p>
+           <p><i class="fa fa-envelope"></i><strong>email :</strong><a href="mailto:admin@urbangrill.com"> admin@fishhouse.com</a></p>
+          </div>
+          <ul class="list-inline footer-social-list">
+              <li><a href="#"><i class="flaticon-twitter1"></i></a></li>
+            <li><a href="#"><i class="flaticon-facebook55"></i></a></li>
+              <li><a href="#"><i class="flaticon-linkedin11"></i></a></li>
+              <li><a href="#"><i class="flaticon-google116"></i></a></li>
+              <li><a href="#"><i class="flaticon-pinterest34"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <h3 class="footer-title">Instagram/Twitter/Social Media</h3>
+          <div class="images-gellary">
+            <ul>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 01"></a></li>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 02"></a></li>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 03"></a></li>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 04"></a></li>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 05"></a></li>
+              <li><a href="#"><img src="http://placehold.it/85X85" alt="Instagram 06"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copy-right pull-left">
+              <p>Copyright-2015 FishHouse | Development by <a href="http://deepbluedev.co">DeepBlueDev</a></p>
+            </div>
+
+              <div class="back-top pull-right">
+                <i class="fa fa-angle-up "></i>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!--==| Footer section End|==-->
+
+</div><!--==| .inner-wrapper |==-->
+
+    <!--==| offcanvas-menu |==-->
+  <div class="offcanvas-menu offcanvas-effect  hidden-sm hidden-md hidden-lg">
+      <button id="off-canvas-close-btn" class="close" type="button" aria-hidden="true" data-toggle="offcanvas" >&times;</button>
+      <h2>Sidebar Menu</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="fhlunch.html">Fish House - Lunch</a></li>
+        <li><a href="fhdinner.html">Fish House - Dinner</a></li>
+        <li><a href="encorelunch.html">Encore - Lunch </a></li>
+        <li><a href="encoredinner.html">Encore - Dinner</a></li>
+        <li><a href="contact-us.html">contact</a></li>
+      </ul>
+    </div><!-- .offcanvas-menu -->
+  </div><!-- .wrapper -->
+
+  <!--  JAVASCRIPT -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <!-- Modernizr JS -->
+  <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+
+  <!--Bootatrap JS-->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- Animate js -->
+  <script type="text/javascript" src="js/wow.min.js"></script>
+
+  <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+  <script type="text/javascript" src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!-- Fancy Box JS -->
+  <script type="text/javascript" src="vendor/fancybox/jquery.fancybox.min.js"></script>
+
+  <!-- OWL CAROUSEL   -->
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+  <!-- Offcanvas -->
+  <script type="text/javascript" src="js/sidebarEffects.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+
+  <!-- Gallery Shuffle Js -->
+  <script type="text/javascript" src="js/jquery.shuffle.min.js"></script>
+
+  <!-- jQuery UI -->
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+  <!-- CountDown -->
+  <script type="text/javascript" src="js/jquery.countdown.js"></script>
+
+  <!-- Validation -->
+  <script type="text/javascript" src="js/validation.js"></script>
+
+  <!-- Tweetie JS  -->
+  <script type="text/javascript" src="js/tweetie.min.js"></script>
+
+  <!-- Google Map PopUp -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="js/map-popup.js"></script>
+
+  <!-- Css Preseter -->
+  <script type="text/javascript" src="js/preset.js"></script>
+
+  <!-- Custom script -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+ </body>
+</html>
